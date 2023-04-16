@@ -1,3 +1,6 @@
-<app-navbar/>
-<p>{{title}}</p>
-<app-test/>
+<div class="container">
+  <app-navbar/>
+  <p>{{title}}</p>
+  <app-test [message]="message" (messageSent)="receiveMessage($event)"/>
+  <p>Received message from child: {{receivedMessage}}</p>
+</div>
